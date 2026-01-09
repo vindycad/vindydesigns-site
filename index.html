@@ -43,15 +43,6 @@
       color: #f97316;
     }
 
-    .quote-btn {
-      padding: 8px 14px;
-      border: 1px solid #2563eb;
-      color: #2563eb;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 500;
-    }
-
     /* HEADER */
     header {
       border-bottom: 1px solid #27272a;
@@ -142,26 +133,20 @@
       color: #71717a;
     }
 
-    /* FLOATING BUTTONS */
-    .whatsapp-float,
-    .quote-float {
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
       position: fixed;
+      bottom: 25px;
       right: 25px;
+      background: #25d366;
       padding: 14px;
       border-radius: 50%;
-      z-index: 1000;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 1000;
       transition: transform 0.2s ease;
     }
 
-    .whatsapp-float {
-      bottom: 25px;
-      background: #25d366;
-    }
-
-
-    .whatsapp-float:hover,
-    
+    .whatsapp-float:hover {
       transform: scale(1.08);
     }
 
@@ -184,7 +169,6 @@
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </div>
-    <a class="quote-btn" href="#contact">Get Quote</a>
   </div>
 </div>
 
@@ -240,13 +224,9 @@
   © VindyDesign Studio — Injection Mold Design & Manufacturing
 </footer>
 
-<!-- FLOATING BUTTONS -->
+<!-- WHATSAPP BUTTON -->
 <a href="https://wa.me/917405951615" class="whatsapp-float" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
-
-<a href="#contact" class="quote-float">
-  Get Quote
 </a>
 
 </body>
