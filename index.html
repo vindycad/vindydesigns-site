@@ -14,8 +14,46 @@
       line-height: 1.6;
     }
 
+    /* NAVBAR */
+    .nav {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-inner {
+      max-width: 1000px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links a {
+      margin-right: 22px;
+      text-decoration: none;
+      color: #1f2937;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #f97316;
+    }
+
+    .quote-btn {
+      padding: 8px 14px;
+      border: 1px solid #2563eb;
+      color: #2563eb;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    /* HEADER */
     header {
-      background: #0a0a0a;
       border-bottom: 1px solid #27272a;
       padding: 80px 20px 60px;
     }
@@ -33,12 +71,11 @@
     }
 
     .tagline {
-      font-size: 26px;
-      font-weight: 400;
-      color: #e5e7eb;
-      letter-spacing: 0.2px;
+      font-size: 28px;
+      font-weight: 500;
     }
 
+    /* CONTENT */
     .container {
       max-width: 1000px;
       margin: auto;
@@ -65,7 +102,25 @@
     }
 
     .section {
-      margin-bottom: 60px;
+      margin-bottom: 80px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery div {
+      background: #111827;
+      height: 160px;
+      border: 1px solid #27272a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #71717a;
+      font-size: 14px;
     }
 
     .cta {
@@ -86,15 +141,66 @@
       font-size: 14px;
       color: #71717a;
     }
+
+    /* FLOATING BUTTONS */
+    .whatsapp-float,
+    .quote-float {
+      position: fixed;
+      right: 25px;
+      padding: 14px;
+      border-radius: 50%;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp-float {
+      bottom: 25px;
+      background: #25d366;
+    }
+
+    .quote-float {
+      bottom: 95px;
+      background: #2563eb;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      padding: 12px 18px;
+    }
+
+    .whatsapp-float:hover,
+    .quote-float:hover {
+      transform: scale(1.08);
+    }
+
+    .whatsapp-float img {
+      width: 48px;
+      height: 48px;
+      display: block;
+    }
   </style>
 </head>
 
 <body>
 
-<header>
+<!-- NAV -->
+<div class="nav">
+  <div class="nav-inner">
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="quote-btn" href="#contact">Get Quote</a>
+  </div>
+</div>
+
+<!-- HOME -->
+<header id="home">
   <div class="header-inner">
     <img src="logo.jpg" alt="VindyDesign Studio Logo">
-
     <div class="tagline">
       Injection Mold Design & Manufacturing Services
     </div>
@@ -103,47 +209,38 @@
 
 <div class="container">
 
-  <div class="section">
-    <h2>About Us</h2>
-    <p>
-      VindyDesign Studio provides precision injection mold design and manufacturing
-      support for automotive, electrical, consumer, and industrial plastic components.
-      We focus on production-ready tooling with global quality standards, strong DFM
-      practices, and on-time delivery.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Our Services</h2>
+  <!-- SERVICES -->
+  <div class="section" id="services">
+    <h2>Services</h2>
     <ul>
       <li>Injection Mold Design (3D & 2D CAD)</li>
       <li>Precision Injection Mold Manufacturing Support</li>
       <li>DFM & Tool Feasibility Study</li>
       <li>Complex Multi-stage & Side-action Mold Design</li>
-      <li>Progressive Tool Design Support</li>
       <li>Reverse Engineering & CAD Conversion</li>
       <li>Pilot & Production Mold Support</li>
     </ul>
   </div>
 
-  <div class="section">
-    <h2>Why VindyDesign Studio</h2>
-    <ul>
-      <li>12+ years of hands-on injection mold design experience</li>
-      <li>Technical ownership of 100+ molds from DFM to mold readiness</li> 
-      <li>Proven first-trial success on complex molds</li>
-      <li>Experience with tight tolerance tooling and global standards</li>
-      <li>Serving Indian and international customers</li>
-    </ul>
+  <!-- GALLERY -->
+  <div class="section" id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <div>Mold Project</div>
+      <div>Core & Cavity</div>
+      <div>Assembly View</div>
+      <div>Tooling Detail</div>
+    </div>
   </div>
 
-  <div class="section">
+  <!-- CONTACT -->
+  <div class="section" id="contact">
     <h2>Contact</h2>
     <p>
-      📧 info@vindydesigns.com<br> 
-      📞 WhatsApp: +91-7405951615 
+      📧 info@vindydesigns.com<br>
+      📞 WhatsApp: +91-7405951615
     </p>
-    <a class="cta" href="mailto:contact@vindydesigns.com">Get in Touch</a>
+    <a class="cta" href="mailto:info@vindydesigns.com">Get in Touch</a>
   </div>
 
 </div>
@@ -151,6 +248,15 @@
 <footer>
   © VindyDesign Studio — Injection Mold Design & Manufacturing
 </footer>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/917405951615" class="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<a href="#contact" class="quote-float">
+  Get Quote
+</a>
 
 </body>
 </html>
