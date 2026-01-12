@@ -12,8 +12,10 @@
       font-family: Inter, system-ui, sans-serif;
       background: #0a0a0a;
       color: #ffffff;
+      line-height: 1.6;
     }
 
+    /* NAV */
     .nav {
       background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
@@ -38,116 +40,185 @@
       font-weight: 500;
     }
 
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    /* HERO */
     header {
-      padding: 80px 20px;
       border-bottom: 1px solid #27272a;
+      padding: 80px 20px 60px;
     }
 
     .hero {
       max-width: 1000px;
       margin: auto;
       display: flex;
-      gap: 40px;
       align-items: center;
+      justify-content: space-between;
+      gap: 40px;
       flex-wrap: wrap;
     }
 
-    .logo { max-width: 340px; }
-    .hero-gif { max-width: 260px; filter: grayscale(100%); }
+    .logo {
+      max-width: 340px;
+      margin-bottom: 20px;
+    }
 
+    .hero-gif {
+      max-width: 260px;
+      filter: grayscale(100%);
+      opacity: 0.9;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    /* CONTENT */
     .container {
       max-width: 1000px;
       margin: auto;
       padding: 60px 20px;
     }
 
-    h1 { font-size: 28px; }
-    h2 { font-size: 24px; margin-bottom: 10px; }
-
-    ul li { color: #d4d4d8; margin-bottom: 8px; }
-
-    .section { margin-bottom: 80px; }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
     }
 
-    .gallery div {
-      background: #111827;
-      height: 160px;
-      border: 1px solid #27272a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #71717a;
+    p {
+      color: #a1a1aa;
+      max-width: 850px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      color: #d4d4d8;
+    }
+
+    .section {
+      margin-bottom: 80px;
+    }
+
+    /* QUICK LINKS */
+    .quick-links a {
+      display: inline-block;
+      margin-right: 20px;
+      margin-top: 10px;
+      color: #60a5fa;
+      text-decoration: none;
+      font-weight: 500;
     }
 
     footer {
       border-top: 1px solid #27272a;
-      padding: 30px;
+      padding: 30px 20px;
       text-align: center;
-      color: #71717a;
       font-size: 14px;
+      color: #71717a;
     }
   </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
   <div class="nav-inner">
     <div class="nav-links">
       <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
       <a href="knowledge.html">Knowledge</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
 </div>
 
+<!-- HERO -->
 <header>
   <div class="hero">
     <div>
-      <img src="logo.jpg" class="logo" alt="VindyDesign Studio">
+      <img src="logo.jpg" class="logo" alt="VindyDesign Studio Logo">
       <h1>Injection Mold Design & Manufacturing Services</h1>
     </div>
-    <img src="injection-molding.gif" class="hero-gif" alt="Injection molding process">
+    <img src="injection-molding.gif" class="hero-gif" alt="Injection molding process animation">
   </div>
 </header>
 
 <div class="container">
 
+  <!-- ABOUT -->
   <div class="section">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Injection Mold Design (3D & 2D CAD)</li>
-      <li>Mold Flow Analysis</li>
-      <li>DFM & Tool Feasibility</li>
-      <li>Complex Side-Action & Multi-Stage Molds</li>
-      <li>Pilot & Production Tooling Support</li>
-    </ul>
+    <h2>About VindyDesign Studio</h2>
+    <p>
+      VindyDesign Studio provides precision injection mold design and manufacturing
+      support for automotive, electrical, consumer, and industrial plastic components.
+      Our focus is on production-ready tooling, strong DFM practices, and reliable
+      first-trial success.
+    </p>
   </div>
 
+  <!-- SERVICES SUMMARY -->
   <div class="section">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <div>Mold Assembly</div>
-      <div>Core & Cavity</div>
-      <div>Side Action Detail</div>
-      <div>Cooling Layout</div>
+    <h2>What We Do</h2>
+    <ul>
+      <li>Injection Mold Design (3D & 2D CAD)</li>
+      <li>Mold Flow Analysis & DFM Support</li>
+      <li>Complex Side-Action & Multi-Stage Mold Design</li>
+      <li>Pilot & Production Tooling Support</li>
+    </ul>
+
+    <div class="quick-links">
+      <a href="services.html">View all services →</a>
     </div>
   </div>
 
+  <!-- KNOWLEDGE LINK -->
+  <div class="section">
+    <h2>Knowledge section</h2>
+    <p>
+      Practical injection mold design insights based on real project experience,
+      covering geometry, gating, cooling, ejection, and mold flow analysis.
+    </p>
+
+    <div class="quick-links">
+      <a href="knowledge.html">Explore knowledge base →</a>
+    </div>
+  </div>
+
+  <!-- GALLERY LINK -->
+  <div class="section">
+    <h2>Projects Gallery</h2>
+    <p>
+      A visual overview of mold design projects, assemblies, core & cavity layouts,
+      and tooling details.
+    </p>
+
+    <div class="quick-links">
+      <a href="gallery.html">View gallery →</a>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
   <div class="section" id="contact">
     <h2>Contact</h2>
-    <p>📧 info@vindydesigns.com<br>📞 WhatsApp: +91-7405951615</p>
+    <p>
+      📧 info@vindydesigns.com<br>
+      📞 WhatsApp: +91-7405951615
+    </p>
   </div>
 
 </div>
 
 <footer>
-  © VindyDesign Studio
+  © VindyDesign Studio — Injection Mold Design & Manufacturing
 </footer>
 
 </body>
