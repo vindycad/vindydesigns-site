@@ -34,7 +34,7 @@
     }
 
     .nav-links a {
-      margin-right: 22px;
+      margin-right: 20px;
       text-decoration: none;
       color: #1f2937;
       font-weight: 500;
@@ -42,6 +42,15 @@
 
     .nav-links a:hover {
       color: #2563eb;
+    }
+
+    .quote-btn {
+      background: #2563eb;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
     }
 
     /* HERO */
@@ -66,7 +75,7 @@
     }
 
     .hero-gif {
-      max-width: 260px;
+      max-width: 220px;
       filter: grayscale(100%);
       opacity: 0.9;
     }
@@ -106,11 +115,7 @@
       margin-bottom: 80px;
     }
 
-    /* QUICK LINKS */
     .quick-links a {
-      display: inline-block;
-      margin-right: 20px;
-      margin-top: 10px;
       color: #60a5fa;
       text-decoration: none;
       font-weight: 500;
@@ -122,6 +127,23 @@
       text-align: center;
       font-size: 14px;
       color: #71717a;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      padding: 14px;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      z-index: 1000;
+    }
+
+    .whatsapp-float img {
+      width: 44px;
+      height: 44px;
     }
   </style>
 </head>
@@ -138,8 +160,13 @@
       <a href="knowledge.html">Knowledge</a>
       <a href="#contact">Contact</a>
     </div>
+
+    <a class="quote-btn"
+       href="https://wa.me/917405951615?text=Hello%20VindyDesign%20Studio,%0AMy%20email:%20%0AI%20need%20a%20quote%20for:"
+       target="_blank">
+      Get Quote
+    </a>
   </div>
-    <div class="quote-btn" onclick="openModal()">Get Quote</div>
 </div>
 
 <!-- HERO -->
@@ -149,24 +176,21 @@
       <img src="logo.jpg" class="logo" alt="VindyDesign Studio Logo">
       <h1>Injection Mold Design & Manufacturing Services</h1>
     </div>
-    <img src="injection-molding.gif" class="hero-gif" alt="Injection molding process animation">
+    <img src="injection-molding.gif" class="hero-gif" alt="Injection molding animation">
   </div>
 </header>
 
 <div class="container">
 
-  <!-- ABOUT -->
   <div class="section">
     <h2>About VindyDesign Studio</h2>
     <p>
-      VindyDesign Studio provides precision injection mold design and manufacturing
-      support for automotive, electrical, consumer, and industrial plastic components.
-      Our focus is on production-ready tooling, strong DFM practices, and reliable
-      first-trial success.
+      Precision injection mold design and manufacturing support for automotive,
+      electrical, consumer, and industrial plastic components with global standards
+      and proven first-trial success.
     </p>
   </div>
 
-  <!-- SERVICES SUMMARY -->
   <div class="section">
     <h2>What We Do</h2>
     <ul>
@@ -175,36 +199,27 @@
       <li>Complex Side-Action & Multi-Stage Mold Design</li>
       <li>Pilot & Production Tooling Support</li>
     </ul>
-
     <div class="quick-links">
       <a href="services.html">View all services →</a>
     </div>
   </div>
-  <!-- GALLERY LINK -->
+
   <div class="section">
     <h2>Projects Gallery</h2>
-    <p>
-      A visual overview of mold design projects, assemblies, core & cavity layouts,
-      and tooling details.
-    </p>
-
+    <p>Core & cavity layouts, assemblies, and tooling details.</p>
     <div class="quick-links">
       <a href="gallery.html">View gallery →</a>
     </div>
   </div>
- 
-  <!-- KNOWLEDGE LINK -->
-  <div class="section">
-    <h2>Knowledge section</h2>
-    <p>
-      Practical injection mold design insights based on real project experience,
-      covering geometry, gating, cooling, ejection, and mold flow analysis.
-    </p>
 
+  <div class="section">
+    <h2>Knowledge</h2>
+    <p>Real-world injection mold design guidance and best practices.</p>
     <div class="quick-links">
       <a href="knowledge.html">Explore knowledge base →</a>
     </div>
-  <!-- CONTACT -->
+  </div>
+
   <div class="section" id="contact">
     <h2>Contact</h2>
     <p>
@@ -218,6 +233,13 @@
 <footer>
   © VindyDesign Studio — Injection Mold Design & Manufacturing
 </footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="whatsapp-float"
+   href="https://wa.me/917405951615"
+   target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 
 </body>
 </html>
