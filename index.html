@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>VindyDesign Studio | Injection Mold Design & Manufacturing</title>
+  <title>Injection Mold Design & Manufacturing Services | VindyDesign Studio</title>
+  <meta name="description" content="Injection mold design, mold flow analysis, DFM, and manufacturing support for automotive, electrical, and industrial plastic components. Serving Indian and international customers.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
@@ -14,7 +15,6 @@
       line-height: 1.6;
     }
 
-    /* NAVBAR */
     .nav {
       background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
@@ -40,20 +40,18 @@
     }
 
     .nav-links a:hover {
-      color: #f97316;
+      color: #2563eb;
     }
 
     .quote-btn {
       padding: 8px 16px;
       background: #2563eb;
       color: #ffffff;
-      text-decoration: none;
       border-radius: 6px;
-      font-weight: 500;
       cursor: pointer;
+      font-weight: 500;
     }
 
-    /* HEADER */
     header {
       border-bottom: 1px solid #27272a;
       padding: 80px 20px 60px;
@@ -64,11 +62,23 @@
       margin: auto;
     }
 
-    header img {
-      max-width: 360px;
-      width: 100%;
-      display: block;
-      margin-bottom: 35px;
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      max-width: 340px;
+      margin-bottom: 25px;
+    }
+
+    .hero-gif {
+      max-width: 280px;
+      filter: grayscale(100%);
+      opacity: 0.9;
     }
 
     .tagline {
@@ -76,7 +86,6 @@
       font-weight: 500;
     }
 
-    /* CONTENT */
     .container {
       max-width: 1000px;
       margin: auto;
@@ -86,6 +95,11 @@
     h2 {
       font-size: 24px;
       margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 40px;
+      font-size: 20px;
     }
 
     p {
@@ -106,22 +120,12 @@
       margin-bottom: 80px;
     }
 
-    /* GALLERY */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery div {
-      background: #111827;
-      height: 160px;
+    img.tech-img {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px 0;
       border: 1px solid #27272a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #71717a;
-      font-size: 14px;
+      background: #000;
     }
 
     footer {
@@ -131,207 +135,100 @@
       font-size: 14px;
       color: #71717a;
     }
-
-    /* MODAL */
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.7);
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-content {
-      background: #0b0b0b;
-      border: 1px solid #27272a;
-      padding: 30px;
-      width: 100%;
-      max-width: 420px;
-      border-radius: 8px;
-    }
-
-    .modal-content h3 {
-      margin-top: 0;
-      margin-bottom: 20px;
-    }
-
-    .modal-content input,
-    .modal-content textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      background: #111827;
-      border: 1px solid #27272a;
-      color: #ffffff;
-      border-radius: 4px;
-    }
-
-    .modal-content button {
-      width: 100%;
-      padding: 12px;
-      background: #2563eb;
-      border: none;
-      color: #ffffff;
-      font-weight: 600;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    /* WHATSAPP FLOAT */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25d366;
-      padding: 14px;
-      border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      z-index: 1000;
-    }
-
-    .whatsapp-float img {
-      width: 48px;
-      height: 48px;
-      display: block;
-    }
-    .hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.hero-left {
-  flex: 1;
-  min-width: 280px;
-}
-
-.logo {
-  max-width: 340px;
-  margin-bottom: 25px;
-}
-
-.hero-right {
-  flex: 1;
-  text-align: right;
-  min-width: 280px;
-}
-
-.hero-gif {
-  max-width: 280px;
-  width: 100%;
-  border-radius: 6px;
-  filter: grayscale(100%);
-  opacity: 0.9;
-}
-
   </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
   <div class="nav-inner">
     <div class="nav-links">
       <a href="#home">Home</a>
       <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
+      <a href="#knowledge">Knowledge</a>
       <a href="#contact">Contact</a>
     </div>
-    <div class="quote-btn" onclick="openModal()">Get Quote</div>
+    <div class="quote-btn">Get Quote</div>
   </div>
 </div>
 
-<!-- HOME -->
 <header id="home">
   <div class="header-inner">
-<div class="hero">
-  <div class="hero-left">
-    <img src="logo.jpg" alt="VindyDesign Studio Logo" class="logo">
-
-    <h1 class="tagline">
-      Injection Mold Design & Manufacturing Services
-    </h1>
-  </div>
-
-  <div class="hero-right">
-    <img src="injection-molding.gif" alt="Injection molding process animation" class="hero-gif">
-  </div>
-</div>
-
+    <div class="hero">
+      <div>
+        <img src="logo.jpg" class="logo" alt="VindyDesign Studio Logo">
+        <h1 class="tagline">Injection Mold Design & Manufacturing Services</h1>
+      </div>
+      <img src="injection-molding.gif" class="hero-gif" alt="Injection molding process animation">
+    </div>
   </div>
 </header>
 
 <div class="container">
 
   <div class="section" id="services">
-<div class="section">
-  <h2>About Us</h2>
-  <p>
-    VindyDesign Studio delivers precision injection mold design and manufacturing
-    solutions for automotive, electrical, consumer, and industrial plastic components.
-    Our focus is on production-ready tooling that meets global quality standards,
-    backed by strong DFM practices and reliable on-time delivery.
-  </p>
-</div>
-    
-<div class="section">
-  <h2>Why VindyDesign Studio</h2>
-  <ul>
-    <li>12+ years of hands-on injection mold design experience</li>
-    <li>Technical ownership of 100+ molds from DFM to mold readiness</li>
-    <li>Proven first-trial success on complex and precision molds</li>
-    <li>Expertise in tight-tolerance tooling and global quality standards</li>
-    <li>Trusted by Indian and international customers</li>
-  </ul>
-</div>
-    <div class="section">
-  <h2>International Customer Footprint </h2>
-  <p>
-    We support customers across multiple regions, delivering injection mold
-    design and manufacturing solutions to both Indian and international markets.
-  </p>
+    <h2>Our Services</h2>
+    <ul>
+      <li>Injection Mold Design (3D & 2D CAD)</li>
+      <li>Mold Flow Analysis</li>
+      <li>DFM & Tool Feasibility Analysis</li>
+      <li>Complex Side-Action & Multi-Stage Mold Design</li>
+      <li>Progressive Tool Design Support</li>
+      <li>Pilot & Production Mold Support</li>
+    </ul>
+  </div>
 
-  <img 
-    src="global-presence.png" 
-    alt="Global Presence Map"
-    style="
-      width: 70%;
-      max-width: 800px;
-      margin-top: 20px;
-      border: 1px solid #27272a;
-      background: #000000;
-    "
-  />
-</div>
-<div class="section">
-  <h2>Our Services</h2>
-  <ul>
-    <li>Injection Mold Design (3D & 2D CAD)</li>
-    <li>Mold Flow Analysis</li>
-    <li>Precision Injection Mold Manufacturing Support</li>
-    <li>DFM & Tool Feasibility Analysis</li>
-    <li>Complex Multi-stage & Side-action Mold Design</li>
-    <li>Progressive Tool Design Support</li>
-    <li>Reverse Engineering & CAD Conversion</li>
-    <li>Pilot & Production Mold Support</li>
-  </ul>
-</div>
+  <!-- KNOWLEDGE SECTION -->
+  <div class="section" id="knowledge">
+    <h2>Knowledge & Engineering Insights</h2>
 
+    <p>
+      This section shares practical injection mold design insights based on real project
+      experience. The focus is on engineering decisions that directly influence tool
+      performance, part quality, and first-trial success.
+    </p>
 
+    <h3>1. Part Geometry & Wall Thickness</h3>
+    <p>
+      Evaluating part geometry early helps identify thin walls, deep ribs, sharp corners,
+      and tolerance-critical areas. Maintaining uniform wall thickness improves flow
+      consistency and minimizes sink marks and warpage.
+    </p>
+    <img src="part-geometry-wall-thickness.jpg" class="tech-img"
+         alt="Injection molded part geometry showing wall thickness and rib design">
 
-  <div class="section" id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <div>Mold Project</div>
-      <div>Core & Cavity</div>
-      <div>Assembly View</div>
-      <div>Tooling Detail</div>
-    </div>
+    <h3>2. Gate & Runner Design</h3>
+    <p>
+      Gate location and runner layout directly impact filling balance, weld lines, and
+      cosmetic quality. Gate type selection depends on part geometry, material behavior,
+      and production volume.
+    </p>
+    <img src="gate-runner-layout.jpg" class="tech-img"
+         alt="Injection mold gate and runner layout for balanced material flow">
+
+    <h3>3. Cooling System Design</h3>
+    <p>
+      Cooling efficiency determines cycle time and dimensional stability. Cooling channels
+      must be positioned to maintain uniform mold temperature and eliminate localized hot spots.
+    </p>
+    <img src="cooling-channel-design.jpg" class="tech-img"
+         alt="Injection mold cooling channel layout for uniform temperature control">
+
+    <h3>4. Draft Angles & Ejection</h3>
+    <p>
+      Proper draft angles reduce ejection force and prevent part damage. Ejector layout
+      should support smooth part release without deformation or stress marks.
+    </p>
+    <img src="draft-angle-ejection.jpg" class="tech-img"
+         alt="Draft angle and ejector system design for injection molded parts">
+
+    <h3>5. Mold Flow Analysis</h3>
+    <p>
+      Mold flow analysis predicts filling behavior, pressure demand, and potential defects.
+      It supports informed design decisions and improves first-trial tool performance.
+    </p>
+    <img src="mold-flow-analysis-result.jpg" class="tech-img"
+         alt="Mold flow analysis result showing filling pattern and flow behavior">
   </div>
 
   <div class="section" id="contact">
@@ -347,40 +244,6 @@
 <footer>
   © VindyDesign Studio — Injection Mold Design & Manufacturing
 </footer>
-
-<!-- GET QUOTE MODAL -->
-<div class="modal" id="quoteModal">
-  <div class="modal-content">
-    <h3>Get a Quote</h3>
-    <input type="email" id="email" placeholder="Your Email" required>
-    <textarea id="message" rows="4" placeholder="Your requirement"></textarea>
-    <button onclick="sendWhatsApp()">Send via WhatsApp</button>
-  </div>
-</div>
-
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/917405951615" class="whatsapp-float" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
-
-<script>
-  function openModal() {
-    document.getElementById('quoteModal').style.display = 'flex';
-  }
-
-  window.onclick = function(e) {
-    if (e.target.id === 'quoteModal') {
-      e.target.style.display = 'none';
-    }
-  }
-
-  function sendWhatsApp() {
-    const email = document.getElementById('email').value;
-    const msg = document.getElementById('message').value;
-    const text = `Quote Request%0AEmail: ${email}%0ARequirement: ${msg}`;
-    window.open(`https://wa.me/917405951615?text=${text}`, '_blank');
-  }
-</script>
 
 </body>
 </html>
