@@ -196,6 +196,38 @@
       height: 48px;
       display: block;
     }
+    .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.logo {
+  max-width: 340px;
+  margin-bottom: 25px;
+}
+
+.hero-right {
+  flex: 1;
+  text-align: right;
+  min-width: 280px;
+}
+
+.hero-gif {
+  max-width: 420px;
+  width: 100%;
+  border-radius: 6px;
+  filter: grayscale(100%);
+  opacity: 0.9;
+}
+
   </style>
 </head>
 
@@ -217,10 +249,20 @@
 <!-- HOME -->
 <header id="home">
   <div class="header-inner">
-    <img src="logo.jpg" alt="VindyDesign Studio Logo">
-    <div class="tagline">
+<div class="hero">
+  <div class="hero-left">
+    <img src="logo.jpg" alt="VindyDesign Studio Logo" class="logo">
+
+    <h1 class="tagline">
       Injection Mold Design & Manufacturing Services
-    </div>
+    </h1>
+  </div>
+
+  <div class="hero-right">
+    <img src="injection-molding.gif" alt="Injection molding process animation" class="hero-gif">
+  </div>
+</div>
+
   </div>
 </header>
 
